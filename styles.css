@@ -1,0 +1,291 @@
+:root {
+    font-size: 62.5%;
+  }
+  
+
+html {
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+   
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    font-size: 1.6rem;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+#signature {
+    display: block;
+    color: white;
+    text-align: end;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+
+/*FLEXBOX*/
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.col {
+    flex-direction: column;
+}
+
+
+
+/* HEADER AND OVERLAY ELEMENTS */
+
+header {
+    background: url(banner.jpg);
+    height: 40rem;
+    color: black;
+    margin-bottom: 5rem;
+    box-shadow: inset 0 0 20px 20px black;
+}
+
+
+.selector {
+    background-color: white;
+    width: 55rem;
+    margin: 20rem auto;
+    /*height: 25rem;*/
+    box-shadow: 1px 1px 20px 4px #000;
+    padding: 2em;
+    font-size: 2rem;
+
+}
+
+.selector > div {
+   margin: 1rem;
+}
+
+.overlay > .selector {
+    padding: 2rem ;
+}
+
+.overlay {
+    position: absolute;
+    background-image: linear-gradient(black, transparent);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+
+
+
+/*MAIN CONTENT*/
+
+.fade-in{
+    animation: fade-in 400ms ease-in-out forwards;
+}
+
+.fade-out{
+    animation: fade-out 400ms ease-in-out forwards;
+}
+
+.card {
+    width: 30rem;
+    height: 25rem;
+    transition: height 200ms ease-in-out;
+    box-shadow: 3px 2px 7px 0px black;
+    margin: 0.5rem;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.card > div {
+    width: 100%;
+    height: 5rem;
+    line-height: 3.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    padding: 0 1.5rem;
+    padding-left: 4rem;
+    position: relative;
+    z-index: 0;
+    cursor: default;
+    font-size: 1.3rem;
+}
+
+.card > .bookTitle {
+    font-weight: bolder;
+}
+
+
+.card > .readIt {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 200ms ease-in-out;
+}
+
+.card > .readIt:hover {
+    opacity: 1;
+}
+
+.card > .trash {
+    padding: 0.5rem 0;
+}
+
+.card > .read {
+    background-color: rgb(16, 235, 16);
+    color: black;
+}
+
+.card > .noRead {
+    background-color: red;
+    color: white;
+}
+
+.card i {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 2rem;
+}
+
+.card i.fa-trash {
+    position: static;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.card i.fa-trash:hover {
+    color: red;
+}
+
+.button {
+    border: none;
+    width: 12rem;
+    height: 5rem;
+    color: white;
+    background-color: black;
+    font-size: 1.6rem;
+    transition: background-color 100ms ease-in-out;
+    text-align: center;
+    line-height: 3;
+    cursor: pointer;
+    
+}
+
+div.enter {
+    margin-right: 0.5rem;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+}
+
+div.enter:hover {
+    background-color: #fff;
+    color: rgb(27, 216, 17);
+    border: 2px solid rgb(27, 216, 17);
+}
+
+div.remove:hover {
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+}
+
+input[type=text] {
+    width: 30rem;
+    height: 3rem;
+}
+
+input[type=number] {
+    width: 14rem;
+    height: 3rem;
+}
+
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    1% {
+        visibility: hidden;
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 575px){
+    
+    .selector {
+        width: 32rem;
+        height: 60rem;
+        font-size: 1.5rem;
+    }
+
+    .overlay .selector {
+        height: 35rem;
+    }
+
+    .selector .button{
+        width: 7rem;
+        height: 4rem;
+        font-size: 1.3rem;
+    }
+
+    input[type=text], input[type=number] {
+        width: 20rem;
+    }
+
+}

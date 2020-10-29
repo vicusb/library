@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6b191a9eea.js" crossorigin="anonymous"></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <a href='https://github.com/vicusb' id="signature" >
+        vicus <i class="fab fa-github"></i>
+    </a>
+
+    <!-------------------------------OVERLAY------------------------------->
+
+    <div class="overlay invisible">
+        <div class="selector flex jc-c col">
+            <div>Enter the book info (you must fill all inputs):</div>
+            <div>
+                <input type="text" id='bookTitle' placeholder="Enter title...">
+                <i class="fas fa-book"></i>
+            </div>
+            <div>
+                <input type="text" id='bookAuthor' placeholder="Enter author...">
+                <i class="fas fa-pen-nib"> </i>
+            </div>
+            <div>
+                <input type="number" min="1" max="10000" id='bookPages' placeholder="Number of pages...">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <div style="font-size: 1.5rem;">
+                Did you finish it?
+                <input type="checkbox" id="readCheck">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <div class="button submit">Submit</div>
+
+        </div>
+    </div>
+
+
+    <!------------------------------HEADER-------------------------------->
+
+    <header class="flex jc-c col">
+        <div class="selector flex jc-c col">
+            
+            
+            <p style="text-align: center; margin-bottom: 6rem; line-height: 2;">
+                This is your own personal digital library! <br>
+                <span style="font-size: 1.55rem;">Use it to <b>keep track</b>  of the books you've read or want to read <br></span> 
+                Press <b>New Book</b> to add a book to the library <br>
+                Press <b>Remove All</b>  to remove all books
+            </p>
+           <section class="flex">
+            <div class="button enter">New Book</div>
+            <div class="button remove">Remove All</div>
+           </section>
+
+           <p style="text-align: center; font-style: italic; font-size: 1.3rem;">
+            This site uses localStorage (Web Storage API) to save your library.
+        </p>
+            
+
+
+        </div>
+
+    </header>
+
+
+    <!------------------------------LIBRARY-------------------------------->
+
+
+
+    <main id="main" class="flex jc-c">
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
