@@ -139,7 +139,7 @@ function addBooksToLibrary() {
         }
         card.appendChild(readIt);
 
-        trash.innerHTML = `<button class='deleter' data-key='${i}'>DELETE</button>`//'<i class="fas fa-trash"></i>';
+        trash.innerHTML = `<i class="fas fa-trash" data-key='${i}'></i>`
         card.appendChild(trash);
 
 
@@ -149,7 +149,7 @@ function addBooksToLibrary() {
     reads = document.querySelectorAll('.readIt');
     reads.forEach(read => read.addEventListener('click', toggleRead));
    
-    deleters = document.querySelectorAll('.deleter');
+    deleters = document.querySelectorAll('.fa-trash');
     deleters.forEach(deleter => deleter.addEventListener('click', deleteBook));
 
 }
