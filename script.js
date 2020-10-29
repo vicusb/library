@@ -169,8 +169,10 @@ function toggleRead(){
 
     if (myLibrary[this.dataset.key].readIt === true){
         myLibrary[this.dataset.key].readIt = false;
+        localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
     } else {
         myLibrary[this.dataset.key].readIt = true;
+        localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
     }
 
     console.table(myLibrary);
